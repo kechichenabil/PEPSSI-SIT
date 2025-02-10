@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;                  /*الاوامر هده لجعل الشاشة خالية من الفراغات*/
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Robote", sans-serif;            /*نوع الخط في الصفحة*/
+}
+
+.container {
+  margin: 0 7rem;  /*لجعل الفراغات في كلى الجوانب في صفحة ككل بستعمال الارتفاع*/
+  height: 100%;
+}
+
+a {
+  text-decoration: none;     /*لحدف الخطوط التي تكون تحت الروابط في النص*/
+}
+
+ul {
+  list-style: none;  /*لحدف النقاط عن بداية الكلمات في القائمة الغير منضمة*/
+}
+
+#home {
+  height: 100vh;
+  background: #276cee;  /*تلوين الخلفية بلون الازرق واضافة الابيض للون النصوص*/
+  color: white;
+}
+
+nav {
+  display: flex;       /*لجعل الشعار في الجهة اليسرا */
+  justify-content: space-between;/*عمل فراغ كبير في الوسط ليفصل بين الشعار والكلمات*/
+  align-items: center;        /*لجعل العناصر تكتب في الوسط */
+}
+
+nav .logo {
+  padding: 25px 0px;
+  width: 50px;                      /*حجم الشعار */
+}
+
+nav ul {
+display: flex;        /*تجعل كلمات الروابط تكتب بشكل مستقيم وليس بشكل افقي*/
+align-items: center;
+}
+ 
+nav ul a {
+  color:white;                /*تغيير لون الروابط العلوية للابيض*/
+  margin:25px;                 /*عمل مسافات بين الروابط */
+  position: relative;
+}
+
+nav ul a::after{
+  content: '';
+  border: 2px solid white;
+  position: absolute;
+  bottom: -6px;
+  width: 100%;
+  left: 0;  
+  transform: scale(0);
+  transition: .5s;
+}
+
+nav ul a:hover::after{
+  transform: scale(1);
+  transition: .5s;
+}
+ 
+#home .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+
+#home .content img{
+  width:220px;
+  animation: animation1 2s ease-out;
+}
+
+#home .content .content-text h1{
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#home .content .content-text h1 span{
+  font-size: 70px;
+}
+
+#home .content .content-text  p{
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  width: 60%;
+}
+
+.btn{
+  font-size: 14px;
+  padding: 10px 15px;
+  background: white;
+  color: black;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.btn:hover{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: .5s;
+}
+
+.social{
+  margin-left: 3rem;
+}
+
+.social i{
+  color:white;
+  font-size: 25px;
+  margin: 10px 0px;
+  animation: animation1 3s ease-out;
+}
+
+.pepsi-types{
+  display: block; /*اعطاء امر لكي تاخد الصورة حجم الصفحة كلها*/
+  width: 100px ;                /*حجم صورة ثلاث بيبسي */
+  margin: auto;          /*لجعل ثلاث علب بيبسي في وسط الصفحة */
+}
+
+@keyframes animation1 {
+  0% {
+    transform: translateX(500px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
